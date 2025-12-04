@@ -39,19 +39,15 @@ export const ContactPage = () => {
 
         <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
           <form className="space-y-4">
-            <div className="flex justify-between gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Input type="text" placeholder="Nome" className="w-full" />
               <Input type="email" placeholder="Email" className="w-full" />
             </div>
-            <div>
-              <Input type="text" placeholder="Assunto" className="w-full" />
-            </div>
-            <div>
-              <Textarea placeholder="Mensagem" className="w-full" rows={4} />
-            </div>
+            <Input type="text" placeholder="Assunto" className="w-full" />
+            <Textarea placeholder="Mensagem" className="w-full" rows={4} />
             <Button
               type="submit"
-              className="w-full mt-4 bg-red-600 hover:bg-red-700"
+              className="w-full mt-4 bg-red-600 hover:bg-red-700 transition-transform transform hover:scale-105"
             >
               Enviar Mensagem
             </Button>

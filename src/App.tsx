@@ -10,10 +10,14 @@ import { ContactPage } from "./pages/contact";
 function App() {
   return (
     <Router>
-      <div className="flex flex-col items-center min-h-screen space-y-3">
-        <Header />
+      <div className="flex flex-col items-center min-h-screen px-2 sm:px-4">
+        {/* Header ocupa sempre 100% */}
+        <div className="w-full">
+          <Header />
+        </div>
 
-        <main className="w-full max-w-[1200px] bg-white rounded-2xl shadow-md p-6">
+        {/* Main responsivo */}
+        <main className="w-full max-w-[1200px] bg-white rounded-xl sm:rounded-2xl shadow-md p-3 sm:p-6 mt-4">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
@@ -22,7 +26,10 @@ function App() {
           </Routes>
         </main>
 
-        <Footer className="w-full max-w-[1200px] bg-white rounded-2xl shadow-md mx-auto" />
+        {/* Footer responsivo */}
+        <div className="w-full max-w-[1200px] mt-4">
+          <Footer className="w-full bg-white rounded-xl sm:rounded-2xl shadow-md" />
+        </div>
       </div>
     </Router>
   );

@@ -46,7 +46,7 @@ export const CategoryPage = () => {
         {category.subcategories.map((sub) => (
           <Button
             key={sub.id}
-            onClick={() => setSelectedSubId(sub.id)}
+            onClick={() => {setSelectedSubId(sub.id); setSearchTerm("");}}
             className={`px-4 py-2 rounded-2xl transition-colors duration-300 ${
               sub.id === currentSub.id
                 ? "bg-red-600 text-white"
